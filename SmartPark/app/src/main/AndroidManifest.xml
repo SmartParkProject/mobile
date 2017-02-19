@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rommo_000.smartpark">
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.NFC" />
+
+        <uses-feature
+            android:name="android.hardware.nfc"
+            android:required="false" />
+
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-feature android:name="android.hardware.camera" />
+
+        <activity android:name=".SScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MakePayment" />
+        <activity android:name=".Account" />
+        <activity android:name=".Availibility" />
+        <activity android:name=".LogIn" />
+        <activity android:name=".ReservationConfirmation" />
+        <activity android:name=".CheckInConfirmation" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MakeAccount" />
+        <activity android:name=".reportParker"></activity>
+    </application>
+
+</manifest>
