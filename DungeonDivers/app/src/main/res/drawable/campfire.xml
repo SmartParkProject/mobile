@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<animation-list
+    android:oneshot="false"
+    android:id="@+id/campfire_anim"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/camp_fire1"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/camp_fire2"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/camp_fire3"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/camp_fire4"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/camp_fire5"
+        android:duration="100"/>
+
+
+</animation-list>

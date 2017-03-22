@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    tools:context="com.example.rommo_000.dungeondivers.statPointAllocation">
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/ddlogo" />
+
+    <TextView
+        android:id="@+id/welcomeToStats"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/logoView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <ImageView
+        android:id="@+id/charViewStat"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_below="@+id/welcomeToStats"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/sideFlameLeft"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/welcomeToStats"
+         />
+    <ImageView
+        android:id="@+id/sideFlameRight"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/welcomeToStats"
+        />
+
+    <TextView
+        android:id="@+id/strengthID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/sideFlameLeft"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sideFlameLeft"
+        android:textAlignment="center"
+        android:layout_marginTop="28dp"
+        android:text="Strength"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/IntelligenceID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/sideFlameRight"
+        android:layout_alignTop="@+id/strengthID"
+        android:textAlignment="center"
+        android:text="Intelligence"
+        android:textColor="@android:color/darker_gray" />
+
+    <ImageButton
+        android:id="@+id/strUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/strengthID"
+        android:layout_marginStart="28dp"
+        android:onClick="incStr"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageButton
+        android:id="@+id/intUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/IntelligenceID"
+        android:layout_below="@+id/IntelligenceID"
+        android:layout_marginStart="27dp"
+        android:onClick="incInt"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <TextView
+        android:id="@+id/strengthValue"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:layout_alignStart="@+id/strUp"
+        android:layout_below="@+id/strUp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/intValue"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:layout_alignStart="@+id/intUp"
+        android:layout_below="@+id/intUp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/strengthDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="decStr"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:layout_below="@+id/strengthValue"
+        android:layout_alignStart="@+id/strengthValue" />
+
+    <ImageButton
+        android:id="@+id/intDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="decInt"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:layout_below="@+id/intValue"
+        android:layout_alignStart="@+id/intValue" />
+
+    <TextView
+        android:id="@+id/defenseID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/strengthID"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/strengthDown"
+        android:layout_marginTop="17dp"
+        android:text="Defense"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/resID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/IntelligenceID"
+        android:layout_alignTop="@+id/defenseID"
+        android:text="Resistance"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray" />
+
+    <ImageButton
+        android:id="@+id/defUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/strengthDown"
+        android:layout_below="@+id/defenseID"
+        android:onClick="incDefense"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageButton
+        android:id="@+id/resUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/intDown"
+        android:layout_below="@+id/resID"
+        android:onClick="incResistance"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <TextView
+        android:id="@+id/defValue"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        android:layout_below="@+id/defUp"
+        android:layout_alignStart="@+id/defUp" />
+
+    <TextView
+        android:id="@+id/resValue"
+        android:layout_width="40dp"
+        android:layout_height="24dp"
+        android:layout_alignEnd="@+id/resUp"
+        android:layout_alignStart="@+id/resUp"
+        android:layout_below="@+id/resUp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/defDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/defValue"
+        android:layout_below="@+id/defValue"
+        android:onClick="decDefense"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageButton
+        android:id="@+id/resDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/resValue"
+        android:layout_below="@+id/resValue"
+        android:onClick="decResistance"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/charViewStat"
+        android:layout_below="@+id/resValue"
+        android:onClick="gotoConfirmation"
+        android:text="Continue" />
+
+
+</RelativeLayout>

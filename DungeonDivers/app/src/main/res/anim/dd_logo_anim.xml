@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+
+
+<scale
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:startOffset="500"
+    android:duration="1000"
+    android:fromXScale=".0001"
+    android:fromYScale=".0001"
+    android:pivotX="50%"
+    android:pivotY="50"
+    android:toXScale="1.0"
+    android:toYScale="1.0"
+    />
+
+
+    <!--
+
+    android:duration="1000"    length of animation
+    android:fromXScale="0"      starting X size
+    android:fromYScale="0"      starting Y size
+    android:pivotX="50%"        pivot (where it grows from, 50% is middle)
+    android:pivotY="50"
+    android:toXScale="1.0"      ending size
+    android:toYScale="1.0"
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@anim/interpolator_resource"
+android:shareInterpolator=["true" | "false"]>
+
+</set>
+
+
+
+     -->

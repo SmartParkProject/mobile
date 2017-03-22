@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    tools:context="com.example.rommo_000.dungeondivers.MainActivity">
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/logoView"
+        android:ems="10"
+        android:hint="Enter Thy Name"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/characterImage"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+
+        android:layout_below="@+id/charType"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
+    <ImageButton
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/left_arrow"
+        android:onClick="cycleRaceBCK"
+        android:layout_alignTop="@+id/characterImage"
+        android:layout_alignEnd="@+id/leftClassButton" />
+
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cycleRaceFWD"
+        app:srcCompat="@drawable/right_arrow"
+        android:layout_alignTop="@+id/characterImage"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/charType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30sp"
+        android:layout_below="@+id/nameInput"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/goToCreateActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToCreate"
+        android:text="Create Character"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/ddlogo" />
+
+    <ImageButton
+        android:id="@+id/leftClassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cycleClassBCK"
+        app:srcCompat="@drawable/left_arrow"
+        android:layout_alignBottom="@+id/toggleGender"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/rightClassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cycleClassFWD"
+        app:srcCompat="@drawable/right_arrow"
+        android:layout_below="@+id/changeClassRight"
+        android:layout_alignStart="@+id/rightButton"
+        android:layout_alignEnd="@+id/rightButton"/>
+
+    <Button
+        android:id="@+id/toggleGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rightClassButton"
+        android:layout_alignEnd="@+id/characterImage"
+        android:layout_alignStart="@+id/characterImage"
+        android:onClick="changeGender"
+        android:text="Gender" />
+
+    <TextView
+        android:id="@+id/changeRaceLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leftButton"
+        android:layout_alignEnd="@+id/leftButton"
+        android:layout_alignParentStart="true"
+        android:text="Change Race"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/chnageRaceRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rightButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/rightButton"
+        android:text="Change Race"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/changeClassLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Class"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:layout_above="@+id/leftClassButton"
+        android:layout_alignStart="@+id/leftButton"
+        android:layout_alignEnd="@+id/leftButton"
+        android:layout_toStartOf="@+id/goToCreateActivity" />
+
+    <TextView
+        android:id="@+id/changeClassRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Class"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@+id/rightButton"
+        android:layout_alignStart="@+id/chnageRaceRight"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<animation-list
+    android:oneshot="false"
+    android:id="@+id/mof_anim"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/m_o_f"
+        android:duration="250"/>
+    <item
+        android:drawable="@drawable/m_o_f2"
+        android:duration="250"/>
+
+</animation-list>
